@@ -1,0 +1,17 @@
+### Python ###
+__pycache__/
+.venv/
+test_reports.xml
+**/__pycache__
+*.pyc
+**/.DS_Store
+tests/scratch/**
+build/
+dist/
+*.egg-info/
+*.egg
+*.log
+tests/scratch
+# Local environment and editor settings
+.env
+.vscode/

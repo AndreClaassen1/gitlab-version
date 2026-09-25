@@ -1,0 +1,33 @@
+[build-system]
+requires = ['setuptools>=61.0', 'wheel', 'setuptools_scm']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'habitica'
+dynamic = ['dependencies']
+version = '0.1.0'  # Initiale Version, kann durch GitlabPackageManager dynamisch angepasst werden
+description = 'Tool for syncing Habitica with Notion'
+authors = [
+    { name = 'André Claaßen', email = 'info@andreclaassen.de' }
+]
+readme = 'README.md'
+license = { text = 'MIT' }
+requires-python = '>=3.10'
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent'
+]
+
+[project.urls]
+Homepage = 'https://gitlab.example.com/username/ac_lib'
+
+[project.scripts]
+habitica-sync = "habitica_sync:main"
+
+[tool.setuptools.packages.find]
+where = ['.']
+exclude = [ 'tests', 'tests.*', 'credentials', 'token', 'settings.py']
+
+[tool.setuptools.dynamic]
+dependencies = { file = ['./requirements.txt'] }

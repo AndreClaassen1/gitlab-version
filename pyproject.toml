@@ -1,0 +1,54 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "wheel",
+    "setuptools_scm",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitlab-version"
+dynamic = [
+    "dependencies",
+]
+version = "0.1.10"
+description = "Module for Gitlab versioning"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+authors = [
+    { name = "André Claaßen", email = "info@andreclaassen.de" },
+]
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/AndreClaassen1/gitlab-version"
+Repository = "https://github.com/AndreClaassen1/gitlab-version"
+
+[project.scripts]
+update-version = "package.update_version:main"
+update-pyproject = "package.update_pyproject:main"
+update-requirements = "package.update_requirements:main"
+delete-old-versions = "package.delete_old_versions:main"
+
+[tool.setuptools.packages.find]
+where = [
+    ".",
+]
+exclude = [
+    "tests",
+    "tests.*",
+    "credentials",
+    "token",
+]
+
+[tool.setuptools.dynamic.dependencies]
+file = [
+    "./requirements.txt",
+]

@@ -1,0 +1,16 @@
+# requirements.txt für Python-Projekte
+#
+# Die Datei wird von Gitlab CI verwendet, um die Abhängigkeiten zu installieren.
+# Die Abhängigkeiten werden in der Datei requirements.txt aufgelistet.
+#
+# WICHITG:
+# --------
+#
+# hier dürfen nur die Pakete rein, die von diesem Paket benötigt werden.
+# du kannst mit `check_outdated_requirements.sh` testen, ob Pakete aktualisiert werden müssen.
+#
+# unittest-xml-reporting needed for unit tests
+unittest-xml-reporting==3.2.0 
+packaging==24.2
+Requests==2.32.3
+toml==0.10.2

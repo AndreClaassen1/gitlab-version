@@ -1,0 +1,23 @@
+# requirements.txt für Python-Projekte
+#
+# Die Datei wird von Gitlab CI verwendet, um die Abhängigkeiten zu installieren.
+# Die Abhängigkeiten werden in der Datei requirements.txt aufgelistet.
+#
+# WICHITG:
+# --------
+#
+# hier dürfen nur die Pakete rein, die von diesem Paket benötigt werden.
+# du kannst mit `check_outdated_requirements.sh` testen, ob Pakete aktualisiert werden müssen.
+#
+# my packages
+ac-lib>=0.1.33
+notion-api-support>=0.2.2
+notion-markdown-ac>=0.1.95
+notion-publisher>=0.1.81
+
+# 3rd party packages
+dict-recursive-update==1.0.1
+validators==0.34.0
+mailchimp-marketing==3.0.80
+freezegun==1.5.1
+openai==1.77.0
